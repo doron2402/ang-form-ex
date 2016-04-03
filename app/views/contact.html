@@ -1,0 +1,23 @@
+<h3>Contact US</h3>
+<p>{{contact.msg}}</p>
+<form class="form">
+  <br/>
+  <input type="text" ng-model="contactInfo.full_name" placeholder="Full Name"/>
+
+  <br/>
+  <input type="phone" ng-model="contactInfo.phone" placeholder="Phone number"/>
+
+  <br/>
+  <input type="email" ng-model="contactInfo.email" placeholder="Email Address"/>
+  <br/>
+  <textarea ng-model="contactInfo.message" placeholder="Message(Optional)"></textarea>
+</form>
+
+<div class="col-sm-6 col-sm-offset-3 text-center">
+  <fieldset>
+    <legend>Contact Info</legend>
+    <p>{{contactInfo.full_name}}</p>
+    <p>{{contactInfo.phone}}</p>
+    <p>{{contactInfo.email}}</p>
+  </fieldset>
+</div>
