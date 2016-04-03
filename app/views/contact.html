@@ -1,6 +1,6 @@
 <h3>Contact US</h3>
 <p>{{contact.msg}}</p>
-<form class="form">
+<form class="form" ng-hide="contact.isSubmit">
   <br/>
   <input type="text" ng-model="contactInfo.full_name" placeholder="Full Name"/>
 
@@ -12,7 +12,9 @@
   <br/>
   <textarea ng-model="contactInfo.message" placeholder="Message(Optional)"></textarea>
 </form>
-
+<div class="col-sm-9" ng-show="contact.isSubmit">
+  <h2>Thank you</h2>
+</div>
 <div class="col-sm-6 col-sm-offset-3 text-center">
   <fieldset>
     <legend>Contact Info</legend>
@@ -21,3 +23,6 @@
     <p>{{contactInfo.email}}</p>
   </fieldset>
 </div>
+
+<button ng-click="contact.submit()">Submit</button>
+
